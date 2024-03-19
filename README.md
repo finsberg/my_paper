@@ -6,7 +6,7 @@
 
 This repository contains supplementary code for the paper
 > Henrik Finsberg.
-> Title of paper, Journal of ..., volume, page, url
+> My paper
 
 Source code is available at < https://github.com/finsberg/my_paper>
 
