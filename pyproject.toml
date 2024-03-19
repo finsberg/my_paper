@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64.4.0", "wheel", "pip>=22.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_paper"
+version = "0.1.0"
+authors = [{name = "Henrik Finsberg", email = "henriknf@simula.no"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.8.0"
+# Generate requirements.txt using
+# pip-compile --output-file=requirements.txt pyproject.toml
+dependencies = [
+]
+
+[project.urls]
+Homepage = "https://finsberg.github.io/my_paper"
+Documentation = "https://finsberg.github.io/my_paper"
+Source = "https://github.com/finsberg/my_paper"
+Tracker = "https://github.com/finsberg/my_paper/issues"
+
+
+
+[project.optional-dependencies]
+# Generate requirements-dev.txt using
+# pip-compile --extra=dev --output-file=requirements-dev.txt pyproject.toml
+dev = [
+]
+# Generate requirements-docs.txt using
+# pip-compile --extra=docs --output-file=requirements-docs.txt pyproject.toml
+docs = [
+    "jupyter-book",
+    "jupytext",
+    "sphinxcontrib-bibtex",
+]
+all = [
+    "my_paper[dev]",
+    "my_paper[docs]",
+]
+# Needed for editable install with no package
+[tool.setuptools]
+packages = []
